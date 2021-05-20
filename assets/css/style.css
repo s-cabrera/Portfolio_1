@@ -1,0 +1,159 @@
+:root{
+    --text_color:lavender;
+    --text:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(192, 207, 207);
+}
+
+header{
+    padding: 20px;
+    color:var(--text_color);
+    background-color: cadetblue;
+    border-bottom: 5px solid darkcyan;
+}
+
+footer{
+    margin-top: 50px;
+    padding: 20px;
+    color:var(--text_color);
+    background-color: cadetblue;
+    border-top: 5px solid darkcyan;
+}
+
+footer h2{
+    text-align: center;
+}
+
+header h1{
+    font-size: 36px;
+    display: inline-block;
+}
+
+header nav{
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: var(--text);
+    font-size: 20px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color:var(--text_color);
+    text-decoration: none;
+}
+
+.img-section{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/background_img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.img-section h2{
+    width:max-content;
+    background-color: rgb(90, 90, 90);
+    opacity: 0.85;
+    color: var(--text_color);
+    font-family: var(--text);
+    font-size: 30px;
+    padding: 15px;
+    position: absolute; /*This will position the header on the middle right of the img-section */
+    right: 0;
+    bottom: 20px;
+}
+
+/* Article related */
+article > section{
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Direct h2 children of section that is direct child of article */
+article > section > h2{
+    width: 200px;
+    padding-right: 20px;
+}
+
+/* This is for the project cards */
+.project-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*The main design for each of the cards for uniformity*/
+.project-card{
+    position: relative;
+    flex: 0 500px;
+    margin: 30px;
+}
+
+/* This one will have a greater value than the others */
+#project-card-main{
+    border: 2px solid red;
+    flex-grow: 2;
+}
+
+.project-card h2{
+    width:max-content;
+    background-color: rgb(90, 90, 90);
+    opacity: 0.85;
+    color: var(--text_color);
+    font-family: var(--text);
+    font-size: 30px;
+    padding: 15px;    
+    position: absolute; /*This will position the header on the middle left of the img-section */
+    left: 0;
+    bottom: 15%;
+
+}
+
+.project-card img{
+    width:100%;
+}
+
+/*
+.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+  
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
+*/
+
+/*Text that is hovered over with defined text-shadow class will have a text-shadow*/
+.text-shadow:hover{
+    text-shadow:5px 5px 5px rgb(80, 79, 79);
+}
+
+/*left border on right content and makes content on the right follow flex rules*/
+.right-content{
+    border-left: 3px solid darkcyan;
+    flex: 1 1 0;
+    padding-left: 20px;
+}
