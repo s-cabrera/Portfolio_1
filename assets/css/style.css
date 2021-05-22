@@ -1,6 +1,9 @@
 :root{
     --text_color:lavender;
     --text:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --dark:rgb(58, 58, 58);
+    --dark_cyan:darkcyan;
+    --blue:cadetblue;
 }
 
 * {
@@ -16,16 +19,16 @@ body{
 header{
     padding: 20px;
     color:var(--text_color);
-    background-color: cadetblue;
-    border-bottom: 5px solid darkcyan;
+    background-color: var(--blue);
+    border-bottom: 5px solid var(--dark_cyan);
 }
 
 footer{
     margin-top: 50px;
     padding: 20px;
     color:var(--text_color);
-    background-color: cadetblue;
-    border-top: 5px solid darkcyan;
+    background-color: var(--blue);
+    border-top: 5px solid var(--dark_cyan);
 }
 
 footer h4{
@@ -70,9 +73,15 @@ h2{
     height: 250px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/background_img.jpg");
+    background-image: url("../images/background.jpg"); 
     background-size: cover;
     background-position: center;
+
+    /*Image is from https://images.pexels.com/photos/135157/
+    pexels-photo-135157.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
+    
+    It is downloaded for quality
+    */
 }
 
 .img-section h2{
@@ -93,7 +102,6 @@ h2{
     height: 100px;
     border-radius: 50%;
     background-color: darkgray;
-    /* border: 2px solid rgb(80, 79, 79); */
     box-shadow: inset 0px 0px 10px  rgb(219, 219, 219), 0 0 17px  rgb(219, 219, 219);
     
 }
@@ -133,10 +141,11 @@ article > section > h2{
 }
 
 .project-card h2{
+    /*This will position the header on the middle left of the project card img */
     width:max-content;
     font-size: 100%;
     padding: 20px;    
-    position: absolute; /*This will position the header on the middle left of the img-section */
+    position: absolute; 
     left: 20px;
     bottom: 15%;
 
@@ -144,14 +153,14 @@ article > section > h2{
 
 .project-card img{
     width:100%;
-    border: 2px solid rgb(58, 58, 58);
+    border: 2px solid var(--dark);
     border-radius: 5px;
 }
 
 /* ------------------ Contact Me related --------------------- */
 #contact-me-main{
     font-family: var(--text);
-    color:rgb(58, 58, 58);
+    color:var(--dark);
 } 
 #contact-me-main ul{
     padding-left: 35px;
@@ -159,7 +168,7 @@ article > section > h2{
 }
 #contact-me-main a{
     display: inline-block;
-    color:rgb(58, 58, 58);
+    color:var(--dark);
 }
 
 
@@ -177,7 +186,8 @@ article > section > h2{
 
 /*left border on right content and makes content on the right follow flex rules*/
 .right-content{
-    border-left: 3px solid darkcyan;
+    border-left: 3px solid var(--dark_cyan);
+    border-top: none;
     flex: 0 0 85%;
     padding-left: 10px;
 }
@@ -190,42 +200,48 @@ header nav ul li:hover{
 /*--------------- Media queries --------------------*/
 @media screen and (max-width: 625px) {
     header{
+        /* Fits the nav bar */
         display: flow-root;
     }
     header h1{
+        /*Make them into blocks*/
         display:block;
     }
     header nav{
+        /* Moves the nav to the left */
         float: left;
     }
     
     header nav ul li{
+        /*Makes the list into blocks instead of inline*/
         display: block;
         margin-left: 0px;
     }
 
     article{
+        /* This will make the blocks into columns */
        flex-direction: column;
     }
     .project-card-container{
+        /* This will center the content*/
         justify-content: center;
     }
 
     .project-card, #project-card-main{
+        /* Will make the cards all of the same size */
         flex: 0 0 100%;
     }
-    /* #project-card-main{
-        flex: 0 0 80%;
-    } */
     .right-content{
+        /*This will make the right-content with width to 100%*/
         flex: 0 0 100%;
-        border-top: 3px solid darkcyan;
+        border-top: 3px solid var(--dark_cyan);
         border-left: none;
         padding-top: 5px;
         padding-left: 0px;
     }
-
+    
     .img-section img{
+        /* This will center the avatar icon */
         position: absolute;
         top: 30%;
         left: 50%;
@@ -233,20 +249,24 @@ header nav ul li:hover{
     }
 
     article > section > h2{
+        /* This will refer to immediate h2 headings */
         padding-bottom: 5px;
         flex: 0 0 100%;
     }
 
     #contact-me-main ul{
+        /*This will add padding to the list */
         padding-left: 25px;
     }
 
     #about-me main{
+        /* This will add padding to the about-me main */
         padding-left: 10px;
     }
   }
 
   @media screen and (min-width: 740px) {
+    /* Changes the image size when its larger than 740px  */
     .img-section img{
         width: 150px;
         height: 150px;

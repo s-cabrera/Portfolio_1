@@ -13,14 +13,22 @@ With these points in mind, in this homework you’ll set yourself up for future 
 Let’s take a look at what a user story written from the perspective of a hiring manager might look like. As you might remember from your first homework, we follow the AS AN / I WANT / SO THAT format. 
 
 
-## User Story
+## Completed Deployed Website
 
-```
-AS AN employer
-I WANT to view a potential employee's deployed portfolio of work samples
-SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
-```
+The following animation shows the web application's appearance and functionality:
 
+![portfolio demo](./assets/images/Portfolio.gif)
+
+
+## Links
+
+You are required to submit BOTH of the following for review:
+
+* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
+* [Github link: https://github.com/s-cabrera/Portfolio](https://github.com/s-cabrera/Portfolio)
+
+* The URL of the deployed application.
+* [Github Page: https://s-cabrera.github.io/Portfolio/](https://s-cabrera.github.io/Portfolio/)
 
 ## Acceptance Criteria
 
@@ -41,14 +49,6 @@ THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ```
-
-
-## Mock-Up
-
-The following animation shows the web application's appearance and functionality:
-
-![portfolio demo](./Assets/02-advanced-css-homework-demo.gif)
-
 
 ## Grading Requirements
 
@@ -83,14 +83,6 @@ This homework is graded based on the following criteria:
 * Repository contains multiple descriptive commit messages.
 
 * Repository contains quality readme with description, screenshot, link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
 
 - - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
