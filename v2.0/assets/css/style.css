@@ -1,0 +1,74 @@
+:root{
+    --text_color:lavender;
+    --text:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --dark:rgb(58, 58, 58);
+    --dark_cyan:darkcyan;
+    --blue:cadetblue;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(192, 207, 207);
+}
+
+.img-section{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/background.jpg"); 
+    background-size: cover;
+    background-position: center;
+
+    /*Image is from https://images.pexels.com/photos/135157/
+    pexels-photo-135157.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
+    
+    It is downloaded for quality
+    */
+}
+
+.img-section h1{
+    background-color: rgb(124, 124, 124);
+    opacity: 0.85;
+    color: var(--text_color);
+    font-family: var(--text);
+    width:fit-content;
+    font-size: 35px;
+    padding: 15px;
+    position: absolute; /* This will position the header on the middle right of the img-section */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-section a{
+    color:var(--text_color);
+    text-decoration: none;
+    width:fit-content;
+    font-size: 30px;
+    padding: 10px;
+    position: absolute; /*This will position the header on the middle right of the img-section */
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.img-section img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: darkgray;
+    box-shadow: inset 0px 0px 10px  rgb(219, 219, 219), 0 0 17px  rgb(219, 219, 219);
+    
+}
+
+
+/*Text that is hovered over with defined text-shadow class will have a text-shadow*/
+.img-section a:hover{
+    text-shadow:5px 5px 5px rgb(17, 17, 17);
+}

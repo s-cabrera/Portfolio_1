@@ -17,7 +17,7 @@ Let’s take a look at what a user story written from the perspective of a hirin
 
 The following animation shows the web application's appearance and functionality:
 
-![portfolio demo](./assets/images/Portfolio.gif)
+![portfolio demo](./v2.0/assets/images/Portfolio.gif)
 
 
 ## Links

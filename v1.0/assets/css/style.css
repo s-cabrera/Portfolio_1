@@ -1,0 +1,275 @@
+:root{
+    --text_color:lavender;
+    --text:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --dark:rgb(58, 58, 58);
+    --dark_cyan:darkcyan;
+    --blue:cadetblue;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(192, 207, 207);
+}
+
+header{
+    padding: 20px;
+    color:var(--text_color);
+    background-color: var(--blue);
+    border-bottom: 5px solid var(--dark_cyan);
+}
+
+footer{
+    margin-top: 50px;
+    padding: 20px;
+    color:var(--text_color);
+    background-color: var(--blue);
+    border-top: 5px solid var(--dark_cyan);
+}
+
+footer h4{
+    text-align: center;
+}
+
+header h1{
+    font-size: 36px;
+    display: inline-block;
+}
+
+header nav{
+    padding-top: 15px;
+    float: right;
+    font-family: var(--text);
+    font-size: 20px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color:var(--text_color);
+    text-decoration: none;
+}
+
+h2{
+    background-color: rgb(90, 90, 90);
+    opacity: 0.85;
+    color: var(--text_color);
+    font-family: var(--text);
+}
+
+.img-section{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/background.jpg"); 
+    background-size: cover;
+    background-position: center;
+
+    /*Image is from https://images.pexels.com/photos/135157/
+    pexels-photo-135157.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
+    
+    It is downloaded for quality
+    */
+}
+
+.img-section h2{
+    width:fit-content;
+    font-size: 30px;
+    padding: 15px;
+    position: absolute; /*This will position the header on the middle right of the img-section */
+    right: 0;
+    bottom: 20px;
+}
+
+.img-section img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: darkgray;
+    box-shadow: inset 0px 0px 10px  rgb(219, 219, 219), 0 0 17px  rgb(219, 219, 219);
+    
+}
+
+/* ------------------Article related  -------------------*/
+article > section{
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Direct h2 children of section that is direct child of article */
+article > section > h2{
+    width: 200px;
+    color:var(--text_color);
+    flex: 0 0 15%;
+}
+
+/* This is for the project cards */
+.project-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*The main design for each of the cards for uniformity*/
+.project-card{
+    position: relative;
+    flex: 0 0 40%;
+    padding: 20px;
+}
+
+/* This one will have a greater value than the others */
+#project-card-main{
+    flex: 0 0 80%;
+}
+
+.project-card h2{
+    /*This will position the header on the middle left of the project card img */
+    width:max-content;
+    font-size: 100%;
+    padding: 20px;    
+    position: absolute; 
+    left: 20px;
+    bottom: 15%;
+
+}
+
+.project-card img{
+    width:100%;
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+}
+
+/* ------------------ Contact Me related --------------------- */
+#contact-me-main{
+    font-family: var(--text);
+    color:var(--dark);
+} 
+#contact-me-main ul{
+    padding-left: 35px;
+    list-style-type: square;
+}
+#contact-me-main a{
+    display: inline-block;
+    color:var(--dark);
+}
+
+
+/*--------------- Styling effects --------------------*/
+/*Boxes that are hovered over with defined text-shadow class will have a text-shadow*/
+.box-shadow:hover{
+    box-shadow: inset 0px 0px 8px  rgb(80, 79, 79), 0 0 15px  rgb(80, 79, 79);
+}
+
+/*Text that is hovered over with defined text-shadow class will have a text-shadow*/
+.text-shadow:hover{
+    text-shadow:5px 5px 5px rgb(80, 79, 79);
+}
+
+
+/*left border on right content and makes content on the right follow flex rules*/
+.right-content{
+    border-left: 3px solid var(--dark_cyan);
+    border-top: none;
+    flex: 0 0 85%;
+    padding-left: 10px;
+}
+
+/* nav li that is hovered over will be underlined
+header nav ul li:hover{
+    text-decoration: underline darkcyan;
+} */
+
+/*--------------- Media queries --------------------*/
+@media screen and (max-width: 625px) {
+    header{
+        /* Fits the nav bar */
+        display: flow-root;
+    }
+    header h1{
+        /*Make them into blocks*/
+        display:block;
+    }
+    header nav{
+        /* Moves the nav to the left */
+        float: left;
+    }
+    
+    header nav ul li{
+        /*Makes the list into blocks instead of inline*/
+        display: block;
+        margin-left: 0px;
+    }
+
+    article{
+        /* This will make the blocks into columns */
+       flex-direction: column;
+    }
+    .project-card-container{
+        /* This will center the content*/
+        justify-content: center;
+    }
+
+    .project-card, #project-card-main{
+        /* Will make the cards all of the same size */
+        flex: 0 0 100%;
+    }
+    .right-content{
+        /*This will make the right-content with width to 100%*/
+        flex: 0 0 100%;
+        border-top: 3px solid var(--dark_cyan);
+        border-left: none;
+        padding-top: 5px;
+        padding-left: 0px;
+    }
+    
+    .img-section img{
+        /* This will center the avatar icon */
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    article > section > h2{
+        /* This will refer to immediate h2 headings */
+        padding-bottom: 5px;
+        flex: 0 0 100%;
+    }
+
+    #contact-me-main ul{
+        /*This will add padding to the list */
+        padding-left: 25px;
+    }
+
+    #about-me main{
+        /* This will add padding to the about-me main */
+        padding-left: 10px;
+    }
+  }
+
+  @media screen and (min-width: 740px) {
+    /* Changes the image size when its larger than 740px  */
+    .img-section img{
+        width: 150px;
+        height: 150px;
+    }
+
+  }
