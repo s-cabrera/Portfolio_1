@@ -19,12 +19,12 @@ var switchToDarkTheme = (button) => {
         'border-top':'5px solid var(--dark_cyan)',
         'background-color':'var(--dark_blue)'
     })
-    $('.right-content').css({
-        'border-left':'3px solid var(--text_light)',
+    $('article > section > h2').css({
+        'border-right':'3px solid var(--text_light)',
         'border-top':'3px solid var(--text_light)'
     })
-    if($(window).width() <= 625){$('.right-content').css('border-left', 'none')}
-    else{$('.right-content').css('border-top', 'none')} 
+    if($(window).width() <= 625){$('article > section > h2').css('border-right', 'none')}
+    else{$('article > section > h2').css('border-top', 'none')} 
 }
 var switchToLightTheme = (button) => {
     currentTheme = "light";
@@ -41,12 +41,12 @@ var switchToLightTheme = (button) => {
         'border-top':'5px solid var(--cyan)',
         'background-color':'var(--blue)'
     })
-    $('.right-content').css({
-        'border-left':'3px solid var(--cyan)',
+    $('article > section > h2').css({
+        'border-right':'3px solid var(--cyan)',
         'border-top':'3px solid var(--cyan)'
     })
-    if($(window).width() <= 625){$('.right-content').css('border-left', 'none')}
-    else{$('.right-content').css('border-top', 'none')}  
+    if($(window).width() <= 625){$('article > section > h2').css('border-right', 'none')}
+    else{$('article > section > h2').css('border-top', 'none')}  
 }
 
 //Receive and save QueryString
@@ -64,14 +64,14 @@ $('button').click((event)=>{
 $(window).resize(function(){
     let color = (currentTheme == 'light')?'--cyan':'--text_light';
     if($(window).width() <= 625){
-        $('.right-content').css({
-            'border-left': 'none',
+        $('article > section > h2').css({
+            'border-right': 'none',
             'border-top':`3px solid var(${color})`
         })
     }
     else{
-        $('.right-content').css({
-            'border-left': `3px solid var(${color})`,
+        $('article > section > h2').css({
+            'border-right': `3px solid var(${color})`,
             'border-top': 'none'
         });
     }  

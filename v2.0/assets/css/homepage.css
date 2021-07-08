@@ -16,8 +16,13 @@
 }
 
 body{
+    min-height: max-content;
     background-color: rgb(192, 207, 207);
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 header{
     padding: 20px;
@@ -27,15 +32,13 @@ header{
 }
 
 footer{
-    margin-top: 50px;
-    padding: 20px;
+    /* position:-ms-page; */
+    /* bottom: 0; */
+    margin-top: 100px; 
+    border-top: 5px solid var(--cyan);
+    width: 100%;
     color:var(--text_light);
     background-color: var(--blue);
-    border-top: 5px solid var(--cyan);
-}
-
-footer h4{
-    text-align: center;
 }
 
 header h1{
@@ -137,6 +140,7 @@ article > section{
 
 /* Direct h2 children of section that is direct child of article */
 article > section > h2{
+    align-self: stretch;
     width: 200px;
     color:var(--text_light);
     flex: 0 0 15%;
@@ -179,18 +183,18 @@ article > section > h2{
 }
 
 /* ------------------ Contact Me related --------------------- */
-#contact-me-main{
+/* #contact-me-main{
     font-family: var(--text);
     color:var(--dark_text);
-} 
-#contact-me-main ul{
+}  */
+#contact-me ul{
     padding-left: 35px;
-    list-style-type: square;
+    list-style-type: none;
 }
-#contact-me-main a{
+/* #contact-me-main a{
     display: inline-block;
     color:var(--dark_text);
-}
+} */
 
 
 /*--------------- Styling effects --------------------*/
@@ -207,8 +211,6 @@ article > section > h2{
 
 /*left border on right content and makes content on the right follow flex rules*/
 .right-content{
-    border-left: 3px solid var(--cyan);
-    border-top: none;
     flex: 0 0 85%;
     padding-left: 10px;
 }
@@ -255,8 +257,6 @@ header nav ul li:hover{
     .right-content{
         /*This will make the right-content with width to 100%*/
         flex: 0 0 100%;
-        border-top: 3px solid var(--cyan);
-        border-left: none;
         padding-top: 5px;
         padding-left: 0px;
     }
@@ -275,10 +275,10 @@ header nav ul li:hover{
         flex: 0 0 100%;
     }
 
-    #contact-me-main ul{
-        /*This will add padding to the list */
+    /* #contact-me-main ul{
+        //This will add padding to the list
         padding-left: 25px;
-    }
+    } */
 
     #about-me main{
         /* This will add padding to the about-me main */
