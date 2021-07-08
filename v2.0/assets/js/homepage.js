@@ -21,10 +21,10 @@ var switchToDarkTheme = (button) => {
     })
     $('article > section > h2').css({
         'border-right':'3px solid var(--text_light)',
-        'border-top':'3px solid var(--text_light)'
+        'border-bottom':'3px solid var(--text_light)'
     })
     if($(window).width() <= 625){$('article > section > h2').css('border-right', 'none')}
-    else{$('article > section > h2').css('border-top', 'none')} 
+    else{$('article > section > h2').css('border-bottom', 'none')} 
 }
 var switchToLightTheme = (button) => {
     currentTheme = "light";
@@ -43,10 +43,10 @@ var switchToLightTheme = (button) => {
     })
     $('article > section > h2').css({
         'border-right':'3px solid var(--cyan)',
-        'border-top':'3px solid var(--cyan)'
+        'border-bottom':'3px solid var(--cyan)'
     })
     if($(window).width() <= 625){$('article > section > h2').css('border-right', 'none')}
-    else{$('article > section > h2').css('border-top', 'none')}  
+    else{$('article > section > h2').css('border-bottom', 'none')}  
 }
 
 //Receive and save QueryString
@@ -66,13 +66,13 @@ $(window).resize(function(){
     if($(window).width() <= 625){
         $('article > section > h2').css({
             'border-right': 'none',
-            'border-top':`3px solid var(${color})`
+            'border-bottom':`3px solid var(${color})`
         })
     }
     else{
         $('article > section > h2').css({
             'border-right': `3px solid var(${color})`,
-            'border-top': 'none'
+            'border-bottom': 'none'
         });
     }  
 });
