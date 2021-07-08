@@ -8,7 +8,6 @@
 
 body{
     height: 100vh;
-    background-color: rgb(192, 207, 207);
 }
 
 .img-section{
@@ -25,6 +24,10 @@ body{
     
     It is downloaded for quality
     */
+}
+.img-section button{
+    position: absolute;
+    top: 5%;
 }
 
 .img-section h1{
