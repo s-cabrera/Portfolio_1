@@ -18,6 +18,7 @@ body{
     background-image: url("../images/background.jpg"); 
     background-size: cover;
     background-position: center;
+    font-size: 100vh;
 
     /*Image is from https://images.pexels.com/photos/135157/
     pexels-photo-135157.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
@@ -27,7 +28,7 @@ body{
 }
 .img-section button{
     position: absolute;
-    top: 5%;
+    top: 2%;
 }
 
 .img-section h1{
@@ -36,10 +37,10 @@ body{
     color: var(--text_color);
     font-family: var(--text);
     width:fit-content;
-    font-size: 35px;
+    font-size: 5%;
     padding: 15px;
     position: absolute; /* This will position the header on the middle right of the img-section */
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -48,10 +49,10 @@ body{
     color:var(--text_color);
     text-decoration: none;
     width:fit-content;
-    font-size: 30px;
+    font-size: 3%;
     padding: 10px;
     position: absolute; /*This will position the header on the middle right of the img-section */
-    top: 75%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -59,7 +60,7 @@ body{
 
 .img-section img{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 150px;
