@@ -4,8 +4,12 @@ var darkURL = "./v2.0/assets/images/dark_background.jpg";
 var lightURL = "./v2.0/assets/images/background.jpg";
 var currentTheme;
 
+console.log(localStorage);
+
 var switchToDarkTheme = (button) => {
     currentTheme = "dark";
+    localStorage.removeItem('theme');
+    localStorage.setItem('theme', currentTheme);
     $(button).addClass('btn-outline-light').removeClass('btn-outline-dark');
     $(button).text('Light');
     $('.img-section').css('background-image',`url(${darkURL})`);
@@ -28,6 +32,8 @@ var switchToDarkTheme = (button) => {
 }
 var switchToLightTheme = (button) => {
     currentTheme = "light";
+    localStorage.removeItem('theme');
+    localStorage.setItem('theme', currentTheme);
     $(button).addClass('btn-outline-dark').removeClass('btn-outline-light');
     $(button).text('Dark');
     $('.img-section').css('background-image',`url(${lightURL})`);
@@ -47,13 +53,17 @@ var switchToLightTheme = (button) => {
     })
     if($(window).width() <= 750){$('article > section > h2').css('border-right', 'none')}
     else{$('article > section > h2').css('border-bottom', 'none')}  
+
 }
 
-//Receive and save QueryString
-const params = new URLSearchParams(document.location.search);
-const theme = params.get("theme");
-theme=="light"?switchToLightTheme($('button')):switchToDarkTheme($('button'));
-currentTheme = theme;
+// //Receive and save QueryString
+// const params = new URLSearchParams(document.location.search);
+// const theme = params.get("theme");
+// theme=="light"?switchToLightTheme($('button')):switchToDarkTheme($('button'));
+// currentTheme = theme;
+
+currentTheme = localStorage.getItem('theme');
+currentTheme=="light"?switchToLightTheme($('button')):switchToDarkTheme($('button'));
 
 // ------------ Event Listeners -------------------//
 $('button').click((event)=>{
