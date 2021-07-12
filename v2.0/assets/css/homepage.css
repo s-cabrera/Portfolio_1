@@ -163,6 +163,12 @@ article > section > h2{
     flex: 0 0 15%;
 }
 
+#about-me p{
+    padding-right: 4%;
+    font-size: large;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 /* This is for the project cards */
 .project-card-container{
     display: flex;
@@ -186,17 +192,29 @@ article > section > h2{
     /*This will position the header on the middle left of the project card img */
     width:max-content;
     font-size: 100%;
-    padding: 20px;    
+    padding: 15px;    
     position: absolute; 
     left: 20px;
-    bottom: 15%;
-
+    bottom: 25%;
 }
 
 .project-card img{
+    /* position: relative; */
     width:100%;
     border: 2px solid var(--dark);
     border-radius: 5px;
+}
+
+/* .project-github i{
+    width: fit-content;
+    height: fit-content;
+} */
+
+.project-github{
+    position: absolute; 
+    color: rgb(90, 90, 90);;
+    right: 1%;
+    bottom: 1%;
 }
 
 /* ------------------ Contact Me related --------------------- */
@@ -238,7 +256,7 @@ header nav ul li:hover{
 } */
 
 /*--------------- Media queries --------------------*/
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 750px) {
     header{
         /* Fits the nav bar */
         display: flow-root;

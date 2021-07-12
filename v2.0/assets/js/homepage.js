@@ -23,7 +23,7 @@ var switchToDarkTheme = (button) => {
         'border-right':'3px solid var(--text_light)',
         'border-bottom':'3px solid var(--text_light)'
     })
-    if($(window).width() <= 625){$('article > section > h2').css('border-right', 'none')}
+    if($(window).width() <= 750){$('article > section > h2').css('border-right', 'none')}
     else{$('article > section > h2').css('border-bottom', 'none')} 
 }
 var switchToLightTheme = (button) => {
@@ -45,7 +45,7 @@ var switchToLightTheme = (button) => {
         'border-right':'3px solid var(--cyan)',
         'border-bottom':'3px solid var(--cyan)'
     })
-    if($(window).width() <= 625){$('article > section > h2').css('border-right', 'none')}
+    if($(window).width() <= 750){$('article > section > h2').css('border-right', 'none')}
     else{$('article > section > h2').css('border-bottom', 'none')}  
 }
 
@@ -63,7 +63,7 @@ $('button').click((event)=>{
 
 $(window).resize(function(){
     let color = (currentTheme == 'light')?'--cyan':'--text_light';
-    if($(window).width() <= 625){
+    if($(window).width() <= 750){
         $('article > section > h2').css({
             'border-right': 'none',
             'border-bottom':`3px solid var(${color})`
@@ -75,4 +75,9 @@ $(window).resize(function(){
             'border-bottom': 'none'
         });
     }  
+});
+
+$('.project-github').click(function(event){
+    console.log('Github icon clicked');
+    window.open(`${$(event.target).attr('href')}`,'_blank')
 });
